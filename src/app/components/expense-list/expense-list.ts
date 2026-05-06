@@ -9,4 +9,7 @@ import { ExpenseItemComponent} from '../expense-item/expense-item';
 })
 export class ExpenseListComponent{
     constructor(public expenseService: ExpenseService) {}
+    deleteExpense(id: string){
+        this.expenseService.deleteExpense(id);
+    }
 }

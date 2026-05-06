@@ -2,4 +2,5 @@
   <h5>{{ expense.title }}</h5>
   <p>Amount: ${{ expense.amount.toFixed(2) }}</p>
   <p>Category: {{ expense.category }}</p>
+  <button class="btn btn-danger btn-sm" (click)="deleteExpense()">Delete</button>
 </div>
