@@ -8,4 +8,5 @@
   <p>Category: {{ expense.category }}</p>
 
   <button class="btn btn-danger btn-sm" (click)="deleteExpense()">Delete</button>
+  <a class="btn btn-warning btn-sm ms-2" [routerLink]="['/edit', expense.id]"></a>
 </div>
