@@ -1,9 +1,5 @@
 <h2>Expenses</h2>
 
 @for (expense of expenseService.expenses(); track expense.id) {
-  <div class="card mb-3 p-3">
-    <h5>{{ expense.title }}</h5>
-    <p>Amount: ${{ expense.amount.toFixed(2) }}</p>
-    <p>Category: {{ expense.category }}</p>
-  </div>
+  <app-expense-item [expense]="expense"></app-expense-item>
 }
