@@ -1,6 +1,11 @@
-<div class="card mb-3 p-3">
+<div
+  class="card mb-3 p-3"
+  [class.border-danger]="expense.amount >= 1000"
+  [style.backgroundColor]="expense.category === 'Food' ? '#fff3cd' : 'White'"
+>
   <h5>{{ expense.title }}</h5>
   <p>Amount: ${{ expense.amount.toFixed(2) }}</p>
   <p>Category: {{ expense.category }}</p>
+
   <button class="btn btn-danger btn-sm" (click)="deleteExpense()">Delete</button>
 </div>
